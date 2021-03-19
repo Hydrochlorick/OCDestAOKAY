@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		50BDA3082601BEF6009A3CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3072601BEF6009A3CCB /* AppDelegate.swift */; };
 		50BDA30A2601BEF6009A3CCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3092601BEF6009A3CCB /* SceneDelegate.swift */; };
-		50BDA30C2601BEF6009A3CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA30B2601BEF6009A3CCB /* ViewController.swift */; };
-		50BDA30F2601BEF6009A3CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BDA30D2601BEF6009A3CCB /* Main.storyboard */; };
 		50BDA3112601BEF7009A3CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDA3102601BEF7009A3CCB /* Assets.xcassets */; };
 		50BDA3142601BEF7009A3CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BDA3122601BEF7009A3CCB /* LaunchScreen.storyboard */; };
+		50BDA3202601BFA5009A3CCB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA31F2601BFA5009A3CCB /* HomeVC.swift */; };
+		50BDA3242601C087009A3CCB /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3232601C087009A3CCB /* TabBarVC.swift */; };
+		50BDA3292601C201009A3CCB /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3282601C201009A3CCB /* Medication.swift */; };
+		50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA33026044A9A009A3CCB /* NewMedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50BDA3042601BEF6009A3CCB /* OCDestAOkAY Pt 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCDestAOkAY Pt 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BDA3042601BEF6009A3CCB /* OCDestAOKAY Pt 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCDestAOKAY Pt 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BDA3072601BEF6009A3CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BDA3092601BEF6009A3CCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		50BDA30B2601BEF6009A3CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		50BDA30E2601BEF6009A3CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50BDA3102601BEF7009A3CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BDA3132601BEF7009A3CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BDA3152601BEF7009A3CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BDA31F2601BFA5009A3CCB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		50BDA3232601C087009A3CCB /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		50BDA3282601C201009A3CCB /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		50BDA33026044A9A009A3CCB /* NewMedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 		50BDA2FB2601BEF6009A3CCB = {
 			isa = PBXGroup;
 			children = (
-				50BDA3062601BEF6009A3CCB /* OCDestAOkAY Pt 2 */,
+				50BDA3062601BEF6009A3CCB /* OCDestAOKAY Pt 2 */,
 				50BDA3052601BEF6009A3CCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +52,73 @@
 		50BDA3052601BEF6009A3CCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50BDA3042601BEF6009A3CCB /* OCDestAOkAY Pt 2.app */,
+				50BDA3042601BEF6009A3CCB /* OCDestAOKAY Pt 2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50BDA3062601BEF6009A3CCB /* OCDestAOkAY Pt 2 */ = {
+		50BDA3062601BEF6009A3CCB /* OCDestAOKAY Pt 2 */ = {
 			isa = PBXGroup;
 			children = (
+				50BDA32E2601C262009A3CCB /* Med List */,
+				50BDA3272601C1EC009A3CCB /* Model */,
+				50BDA3262601C1CA009A3CCB /* New Med */,
+				50BDA31D2601BF7D009A3CCB /* Home */,
+				50BDA3222601C056009A3CCB /* Navigation */,
 				50BDA3072601BEF6009A3CCB /* AppDelegate.swift */,
 				50BDA3092601BEF6009A3CCB /* SceneDelegate.swift */,
-				50BDA30B2601BEF6009A3CCB /* ViewController.swift */,
-				50BDA30D2601BEF6009A3CCB /* Main.storyboard */,
 				50BDA3102601BEF7009A3CCB /* Assets.xcassets */,
 				50BDA3122601BEF7009A3CCB /* LaunchScreen.storyboard */,
 				50BDA3152601BEF7009A3CCB /* Info.plist */,
 			);
-			path = "OCDestAOkAY Pt 2";
+			path = "OCDestAOKAY Pt 2";
+			sourceTree = "<group>";
+		};
+		50BDA31D2601BF7D009A3CCB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				50BDA31F2601BFA5009A3CCB /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		50BDA3222601C056009A3CCB /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				50BDA3232601C087009A3CCB /* TabBarVC.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		50BDA3262601C1CA009A3CCB /* New Med */ = {
+			isa = PBXGroup;
+			children = (
+				50BDA33026044A9A009A3CCB /* NewMedVC.swift */,
+			);
+			path = "New Med";
+			sourceTree = "<group>";
+		};
+		50BDA3272601C1EC009A3CCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50BDA3282601C201009A3CCB /* Medication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50BDA32E2601C262009A3CCB /* Med List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Med List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50BDA3032601BEF6009A3CCB /* OCDestAOkAY Pt 2 */ = {
+		50BDA3032601BEF6009A3CCB /* OCDestAOKAY Pt 2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50BDA3182601BEF7009A3CCB /* Build configuration list for PBXNativeTarget "OCDestAOkAY Pt 2" */;
+			buildConfigurationList = 50BDA3182601BEF7009A3CCB /* Build configuration list for PBXNativeTarget "OCDestAOKAY Pt 2" */;
 			buildPhases = (
 				50BDA3002601BEF6009A3CCB /* Sources */,
 				50BDA3012601BEF6009A3CCB /* Frameworks */,
@@ -82,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = "OCDestAOkAY Pt 2";
+			name = "OCDestAOKAY Pt 2";
 			productName = "OCDestAOkAY Pt 2";
-			productReference = 50BDA3042601BEF6009A3CCB /* OCDestAOkAY Pt 2.app */;
+			productReference = 50BDA3042601BEF6009A3CCB /* OCDestAOKAY Pt 2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +147,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50BDA2FF2601BEF6009A3CCB /* Build configuration list for PBXProject "OCDestAOkAY Pt 2" */;
+			buildConfigurationList = 50BDA2FF2601BEF6009A3CCB /* Build configuration list for PBXProject "OCDestAOKAY Pt 2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50BDA3032601BEF6009A3CCB /* OCDestAOkAY Pt 2 */,
+				50BDA3032601BEF6009A3CCB /* OCDestAOKAY Pt 2 */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +172,6 @@
 			files = (
 				50BDA3142601BEF7009A3CCB /* LaunchScreen.storyboard in Resources */,
 				50BDA3112601BEF7009A3CCB /* Assets.xcassets in Resources */,
-				50BDA30F2601BEF6009A3CCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BDA30C2601BEF6009A3CCB /* ViewController.swift in Sources */,
+				50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */,
+				50BDA3292601C201009A3CCB /* Medication.swift in Sources */,
+				50BDA3202601BFA5009A3CCB /* HomeVC.swift in Sources */,
 				50BDA3082601BEF6009A3CCB /* AppDelegate.swift in Sources */,
+				50BDA3242601C087009A3CCB /* TabBarVC.swift in Sources */,
 				50BDA30A2601BEF6009A3CCB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		50BDA30D2601BEF6009A3CCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50BDA30E2601BEF6009A3CCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		50BDA3122601BEF7009A3CCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +332,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Daydream-Society.OCDestAOkAY-Pt-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daydream-Society.OCDestAOKAY-Pt-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,7 +350,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Daydream-Society.OCDestAOkAY-Pt-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daydream-Society.OCDestAOKAY-Pt-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50BDA2FF2601BEF6009A3CCB /* Build configuration list for PBXProject "OCDestAOkAY Pt 2" */ = {
+		50BDA2FF2601BEF6009A3CCB /* Build configuration list for PBXProject "OCDestAOKAY Pt 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50BDA3162601BEF7009A3CCB /* Debug */,
@@ -329,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50BDA3182601BEF7009A3CCB /* Build configuration list for PBXNativeTarget "OCDestAOkAY Pt 2" */ = {
+		50BDA3182601BEF7009A3CCB /* Build configuration list for PBXNativeTarget "OCDestAOKAY Pt 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50BDA3192601BEF7009A3CCB /* Debug */,
