@@ -15,6 +15,8 @@
 		50BDA3242601C087009A3CCB /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3232601C087009A3CCB /* TabBarVC.swift */; };
 		50BDA3292601C201009A3CCB /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3282601C201009A3CCB /* Medication.swift */; };
 		50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA33026044A9A009A3CCB /* NewMedVC.swift */; };
+		50BDA3352605BE3C009A3CCB /* MedListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3342605BE3C009A3CCB /* MedListVC.swift */; };
+		50BDA3382605BEAF009A3CCB /* MedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3372605BEAF009A3CCB /* MedTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		50BDA3232601C087009A3CCB /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		50BDA3282601C201009A3CCB /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		50BDA33026044A9A009A3CCB /* NewMedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedVC.swift; sourceTree = "<group>"; };
+		50BDA3342605BE3C009A3CCB /* MedListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedListVC.swift; sourceTree = "<group>"; };
+		50BDA3372605BEAF009A3CCB /* MedTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		50BDA32E2601C262009A3CCB /* Med List */ = {
 			isa = PBXGroup;
 			children = (
+				50BDA3342605BE3C009A3CCB /* MedListVC.swift */,
+				50BDA3372605BEAF009A3CCB /* MedTVCell.swift */,
 			);
 			path = "Med List";
 			sourceTree = "<group>";
@@ -182,7 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BDA3352605BE3C009A3CCB /* MedListVC.swift in Sources */,
 				50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */,
+				50BDA3382605BEAF009A3CCB /* MedTVCell.swift in Sources */,
 				50BDA3292601C201009A3CCB /* Medication.swift in Sources */,
 				50BDA3202601BFA5009A3CCB /* HomeVC.swift in Sources */,
 				50BDA3082601BEF6009A3CCB /* AppDelegate.swift in Sources */,

@@ -7,8 +7,7 @@
 
 import Foundation
 
-// Cool units only
-enum massUnit : String, CaseIterable {
+enum massUnit : String, CaseIterable { // Cool units only
     case miligram = "mg"
     case microgram = "ug"
     case milliliter = "mL"
