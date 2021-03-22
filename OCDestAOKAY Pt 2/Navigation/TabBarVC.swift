@@ -26,13 +26,17 @@ class TabBarVC: UITabBarController, UITabBarControllerDelegate {
         
         let homeView = HomeVC()
         let homeNavController = UINavigationController(rootViewController: homeView)
-        homeView.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        homeView.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        
+        let medListView = MedListVC()
+        let medListController = UINavigationController(rootViewController: medListView)
+        medListView.tabBarItem = UITabBarItem(title: "Meds", image: UIImage(systemName: "list.bullet"), selectedImage: UIImage(systemName: "list.triangle"))
         
         let newMedView = NewMedVC()
         let newMedController = UINavigationController(rootViewController: newMedView)
-        newMedView.tabBarItem = UITabBarItem(title: "New Med", image: UIImage(systemName: "list.bullet"), tag: 1)
+        newMedView.tabBarItem = UITabBarItem(title: "New Med", image: UIImage(systemName: "pills"), selectedImage: UIImage(systemName: "pills.fill"))
         
-        viewControllers = [homeNavController, newMedController]
+        viewControllers = [homeNavController, medListController, newMedController]
     }
 
     /*

@@ -16,7 +16,7 @@ class MedTVCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fill
+        stackView.distribution = .equalSpacing
         return stackView
     }()
     
@@ -25,6 +25,7 @@ class MedTVCell: UITableViewCell {
         label.font = UIFont(name: "Helvetica", size: 20)
         label.textColor = UIColor(named: "offWhite")
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
         return label
     }()
     
@@ -43,6 +44,7 @@ class MedTVCell: UITableViewCell {
     
     func setupCell() {
         contentView.addSubview(cellStack)
+        self.backgroundColor = UIColor(named: "notTooBlack")
         
         // Setup stackView constraints the fancy way
         NSLayoutConstraint.activate([
@@ -53,16 +55,23 @@ class MedTVCell: UITableViewCell {
         ])
         
         cellStack.addArrangedSubview(medImage)
-        medImage.widthAnchor.constraint(equalTo: cellStack.widthAnchor, multiplier: 0.25).isActive = true
+        medImage.leftAnchor.constraint(equalTo: cellStack.leftAnchor, constant: 10).isActive = true
         
         cellStack.addArrangedSubview(medLabel)
-        medLabel.widthAnchor.constraint(equalTo: cellStack.widthAnchor, multiplier: 0.55).isActive = true
+        medLabel.rightAnchor.constraint(equalTo: cellStack.rightAnchor).isActive = true
+//        medLabel.widthAnchor.constraint(equalTo: cellStack.widthAnchor, multiplier: 0.6).isActive = true
     }
     
     func fillCell(med: Medication) {
         // TODO Find some way to make the image fun/customizable
         medImage.image = UIImage(systemName: "pills.fill")
-        medLabel.text = "\(med.dose) \(med.name)\(med.units)"
+        medLabel.text = "\(med.dose)\(med.units.rawValue) \(med.name)"
+        
+        if med.completedToday {
+            self.accessoryType = .checkmark
+        } else {
+            self.accessoryType = .none
+        }
     }
     
     required init?(coder: NSCoder) {

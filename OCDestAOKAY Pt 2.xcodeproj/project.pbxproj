@@ -17,6 +17,8 @@
 		50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA33026044A9A009A3CCB /* NewMedVC.swift */; };
 		50BDA3352605BE3C009A3CCB /* MedListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3342605BE3C009A3CCB /* MedListVC.swift */; };
 		50BDA3382605BEAF009A3CCB /* MedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA3372605BEAF009A3CCB /* MedTVCell.swift */; };
+		50BDA33B2606F2C9009A3CCB /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA33A2606F2C9009A3CCB /* DateExtensions.swift */; };
+		50BDA33E26087E79009A3CCB /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDA33D26087E79009A3CCB /* PersistenceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		50BDA33026044A9A009A3CCB /* NewMedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedVC.swift; sourceTree = "<group>"; };
 		50BDA3342605BE3C009A3CCB /* MedListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedListVC.swift; sourceTree = "<group>"; };
 		50BDA3372605BEAF009A3CCB /* MedTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTVCell.swift; sourceTree = "<group>"; };
+		50BDA33A2606F2C9009A3CCB /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		50BDA33D26087E79009A3CCB /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				50BDA3282601C201009A3CCB /* Medication.swift */,
+				50BDA33D26087E79009A3CCB /* PersistenceLayer.swift */,
+				50BDA33A2606F2C9009A3CCB /* DateExtensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,8 +197,10 @@
 				50BDA3352605BE3C009A3CCB /* MedListVC.swift in Sources */,
 				50BDA33126044A9A009A3CCB /* NewMedVC.swift in Sources */,
 				50BDA3382605BEAF009A3CCB /* MedTVCell.swift in Sources */,
+				50BDA33E26087E79009A3CCB /* PersistenceLayer.swift in Sources */,
 				50BDA3292601C201009A3CCB /* Medication.swift in Sources */,
 				50BDA3202601BFA5009A3CCB /* HomeVC.swift in Sources */,
+				50BDA33B2606F2C9009A3CCB /* DateExtensions.swift in Sources */,
 				50BDA3082601BEF6009A3CCB /* AppDelegate.swift in Sources */,
 				50BDA3242601C087009A3CCB /* TabBarVC.swift in Sources */,
 				50BDA30A2601BEF6009A3CCB /* SceneDelegate.swift in Sources */,
