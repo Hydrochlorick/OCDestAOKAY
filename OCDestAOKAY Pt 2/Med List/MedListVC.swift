@@ -2,8 +2,7 @@
 //  MedListVC.swift
 //  OCDestAOKAY Pt 2
 //
-//  Created by Rick Jacobson on 3/19/21.
-//
+//  Adapted from Make School Habitual Tutorial
 
 import UIKit
 
@@ -15,25 +14,33 @@ class MedListVC: UIViewController {
     
     var meds: [Medication] = []
     
-    let testMeds: [Medication] = [
-        Medication(name: "Chicken Nuggets", dose: 20, units: .miligram),
-        Medication(name: "Alcohol", dose: 100, units: .milliliter)
-    ]
+//    let testMeds: [Medication] = [
+//        Medication(name: "Chicken Nuggets", dose: 20, units: .miligram),
+//        Medication(name: "Alcohol", dose: 100, units: .milliliter)
+//    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "notTooBlack")
+        self.title = "My Medications"
+        
+                
+        setupNavBar()
+        setupTableView()
+    }
+    
+    func setupNavBar() {
+        navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func setupTableView() {
         
         medTableView.register(MedTVCell.self, forCellReuseIdentifier: "cell")
         medTableView.backgroundColor = UIColor(named: "notTooBlack")
         
         medTableView.dataSource = self
         medTableView.delegate = self
-        
-        setupTableView()
-    }
-    
-    func setupTableView() {
+
         view.addSubview(medTableView)
         medTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -52,12 +59,7 @@ class MedListVC: UIViewController {
     }
     
 
-    /*
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
 
 }
 
@@ -74,5 +76,50 @@ extension MedListVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedMed = persistence.meds[indexPath.row]
+        let medDeatilVC = MedDetailVC()
+        medDeatilVC.detailedMed = selectedMed
+        medDeatilVC.medIndex = indexPath.row
+        
+        navigationController?.pushViewController(medDeatilVC, animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let medIndexToDelete = indexPath.row
+            let medToDelete = persistence.meds[medIndexToDelete]
+            
+            let deleteAlert = UIAlertController(medTitle: medToDelete.name) {
+                self.persistence.deleteMed(medIndexToDelete)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            
+            self.present(deleteAlert, animated: true)
+        default:
+            break
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        persistence.swapMeds(medIndex: sourceIndexPath.row, destinationIndex: destinationIndexPath.row)
+    }
+    
+}
+
+extension UIAlertController {
+    convenience init(medTitle: String, comfirmHandler: @escaping () -> Void) {
+            self.init(title: "Delete Medication", message: "Are you sure you want to delete \(medTitle)?", preferredStyle: .actionSheet)
+
+            let confirmAction = UIAlertAction(title: "Confirm", style: .destructive) { _ in
+                comfirmHandler()
+            }
+            self.addAction(confirmAction)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            self.addAction(cancelAction)
+        }
+
 }

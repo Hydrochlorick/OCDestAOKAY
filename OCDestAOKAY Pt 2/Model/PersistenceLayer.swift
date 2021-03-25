@@ -2,9 +2,9 @@
 //  PersistenceLayer.swift
 //  OCDestAOKAY Pt 2
 //
-//  Created by Rick Jacobson on 3/22/21.
+//
 //  Adapted from Make School Habitual Tutorial
-// It's actually hilarious how similar my concept is to the tutorial that was planned for MOB 1.2
+//  It's actually hilarious how similar my concept is to the tutorial that was planned for MOB 1.2
 
 
 import Foundation
@@ -15,9 +15,9 @@ import Foundation
 
 struct PersistenceLayer {
     
-    // Can't say I fully understand any of this
     private(set) var meds: [Medication] = []
     
+    // TODO: Learn from this: Make as much reusable code as is possible, even if you have no other uses for it, currently.
     private static let userDefaultsMedsKeyValue = "MEDS_ARRAY"
     
     init() {
@@ -29,7 +29,6 @@ struct PersistenceLayer {
         // Make a UserDefaults object
         let userDefaults = UserDefaults.standard
         
-        // Wtf is this syntax? I do not get "guard" statements.
         guard
             let medData = userDefaults.data(forKey: PersistenceLayer.userDefaultsMedsKeyValue),
             let meds = try? JSONDecoder().decode([Medication].self, from: medData) else {
@@ -40,13 +39,12 @@ struct PersistenceLayer {
     }
     
     @discardableResult
-    mutating func createNewMed(name: String, dose: Float, unit: massUnit) -> Medication {
+    mutating func createNewMed(createdMed: Medication) -> Medication {
         
-        let newMed = Medication(name: name, dose: dose, units: unit)
-        self.meds.insert(newMed, at: 0) // Wonder if prepending the new med every time is going to bite me in the butt
+        self.meds.insert(createdMed, at: 0)
         self.saveMeds()
         
-        return newMed
+        return createdMed
     }
     
     private func saveMeds() {
@@ -61,7 +59,7 @@ struct PersistenceLayer {
         // Looks like userDefaults.synchronize() is no longer necessary to get this to work. Let's hope we don't bump into any issues
     }
     
-    mutating func deleteMed(_ medIndex: Int) {  // Fuckin knew it
+    mutating func deleteMed(_ medIndex: Int) {
         
         self.meds.remove(at: medIndex)
         
@@ -74,7 +72,7 @@ struct PersistenceLayer {
         
         guard updatedMedication.completedToday == false else {return updatedMedication} // Holy shit I think I get guard statements now
         
-        updatedMedication.dosesTaken += 1
+        updatedMedication.numberOfDosesTaken += 1
         
         // If medication was taken yesterday
         if let lastDoseDate = updatedMedication.lastDoseDate, lastDoseDate.isYesterday {
@@ -82,6 +80,7 @@ struct PersistenceLayer {
             updatedMedication.currentStreak += 1
         } else {
             // Gotta start somewhere
+            updatedMedication.streakStartDate = Date()
             updatedMedication.currentStreak = 1
         }
         

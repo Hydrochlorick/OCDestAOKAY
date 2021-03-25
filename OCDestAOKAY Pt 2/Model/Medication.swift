@@ -3,7 +3,7 @@
 //  OCDisAOK
 //
 //  Created by Rick Jacobson on 1/12/21.
-//
+//  Adapted from Make School Habitual Tutorial
 
 import Foundation
 
@@ -24,10 +24,11 @@ struct Medication: Codable {
     var units: massUnit
     
     var lastDoseDate: Date?
-    var dosesTaken: Int = 0
+    var numberOfDosesTaken: Int = 0
     
     var currentStreak: Int = 0
     var bestStreak: Int = 0
+    var streakStartDate: Date? = Date()
     
     var completedToday: Bool {
         return lastDoseDate?.isToday ?? false

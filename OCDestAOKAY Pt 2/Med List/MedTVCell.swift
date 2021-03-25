@@ -33,10 +33,12 @@ class MedTVCell: UITableViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
+        image.tintColor = UIColor(named: "orangeRed")
         return image
     }()
     
     // init OUR way
+    // Which is basically their way, anyway
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCell()
@@ -63,7 +65,7 @@ class MedTVCell: UITableViewCell {
     }
     
     func fillCell(med: Medication) {
-        // TODO Find some way to make the image fun/customizable
+        // TODO It'd be cool to have a database of images of chemical structures or brand names for these, one day
         medImage.image = UIImage(systemName: "pills.fill")
         medLabel.text = "\(med.dose)\(med.units.rawValue) \(med.name)"
         

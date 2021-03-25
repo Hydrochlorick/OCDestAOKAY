@@ -2,7 +2,7 @@
 //  DateExtensions.swift
 //  OCDestAOKAY Pt 2
 //
-//  Copyright Make School/Adriana Gonzalez 
+//  Copyright Make School
 //
 
 import Foundation
