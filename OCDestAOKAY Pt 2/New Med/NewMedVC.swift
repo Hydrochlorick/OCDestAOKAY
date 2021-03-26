@@ -52,6 +52,7 @@ class NewMedVC: UIViewController {
         textField.placeholder = "0"
         textField.textAlignment = .right
         textField.backgroundColor = UIColor(named: "offWhite")
+        textField.heightAnchor.constraint(equalToConstant: 30).isActive = true
         // LOOK AT ALL THESE FUN THINGS WE CAN DO WITH TEXT FIELDS
         textField.deleteBackward()
         textField.keyboardType = .numberPad
